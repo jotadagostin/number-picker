@@ -6,6 +6,6 @@ This is one of the challenges of the Full Stack training, one of the contents av
 -HTML: []
 
 -CSS:
--Global.css []
+-Global.css [x]
 
 -Javascript: []

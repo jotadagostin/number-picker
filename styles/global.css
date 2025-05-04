@@ -52,4 +52,37 @@
   /* Typography */
 
   /* Font-family Sora */
+
+  --font-family-sora: "Sora", system-ui;
+  --font-display-large: 800 72px/130% var(--font-family-sora);
+  --font-display-medium: 800 40px/130% var(--font-family-sora);
+  --font-display-small: 700 32px/130% var(--font-family-sora);
+
+  /* Font-family Roboto Mono */
+
+  --font-family-mono: "Roboto Mono", monospace;
+  --font-overline: 700 16px/150% var(--font-family-mono);
+
+  /* Font-family Roboto Flex */
+
+  --font-family-flex: "Roboto Flex", sans-serif;
+  --font-paragraph-large: 500 16px/150% var(--font-family-flex);
+  --font-paragraph-medium: 500 14px/150% var(--font-family-flex);
+  --font-paragraph-small: 500 12px/150% var(--font-family-flex);
+  --font-label-medium: 700 20px/150% var(--font-family-flex);
+  --font-label-small: 700 16px/150% var(--font-family-flex);
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  height: 100vh;
+  background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.9) 22.66%,
+      rgba(0, 0, 0, 0.54) 100%
+    ),
+    var(--color-background-primary) url(../assets/img/backrgound-img.png) bottom
+      left/100% no-repeat;
 }
