@@ -63,6 +63,7 @@
 
   --font-family-mono: "Roboto Mono", monospace;
   --font-overline: 700 16px/150% var(--font-family-mono);
+  --font-overline-result: 700 48px/150% var(--font-family-mono);
 
   /* Font-family Roboto Flex */
 

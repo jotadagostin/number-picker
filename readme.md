@@ -6,12 +6,12 @@ This is one of the challenges of the Full Stack training, one of the contents av
 -HTML: []
 -Header-logo [x]
 -Main: Container-title [x]
-Container-form []
+Container-form [x]
 
 -CSS:
 -Global.css [x]
 -Header-logo [x]
 -Main: Container-title [x]
-Container-form []
+Container-form [x]
 
 -Javascript: []
