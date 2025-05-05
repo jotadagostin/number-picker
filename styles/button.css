@@ -43,7 +43,29 @@ button {
       width: 99.34%;
       height: 52.8px;
     }
+
+    img {
+      animation: arrowMove 1s infinite ease-in-out;
+    }
   }
+}
+
+button#draw-again {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+button#draw-again img {
+  transition: transform 0.3s ease;
+}
+
+button#draw-again:hover img {
+  animation: rotateIcon 1.2s linear infinite;
 }
 
 @keyframes changeGradient {
@@ -106,5 +128,26 @@ button {
       #d586e0 66.31%,
       #91a1fa 85.11%
     );
+  }
+}
+
+@keyframes arrowMove {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(6px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes rotateIcon {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
   }
 }

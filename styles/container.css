@@ -80,6 +80,54 @@
           display: flex;
           gap: 12px;
           margin-bottom: 28px;
+
+          .number-wrapper.focused .number-label {
+            color: var(--color-background-brand);
+          }
+
+          .number {
+            border: 2px solid transparent;
+            background-origin: border-box;
+            background-clip: padding-box, border-box;
+            background-image: linear-gradient(
+                var(--color-background-secondary),
+                var(--color-background-secondary)
+              ),
+              var(--linear-gradient-border);
+            animation: borderAnimation 2s linear infinite;
+          }
+
+          @keyframes borderAnimation {
+            0% {
+              background-image: linear-gradient(
+                  var(--color-background-secondary),
+                  var(--color-background-secondary)
+                ),
+                linear-gradient(
+                  0deg,
+                  #77c0af,
+                  #d1dc97,
+                  #e9a9b3,
+                  #d586e0,
+                  #91a1fa
+                );
+            }
+            100% {
+              background-image: linear-gradient(
+                  var(--color-background-secondary),
+                  var(--color-background-secondary)
+                ),
+                linear-gradient(
+                  360deg,
+                  #77c0af,
+                  #d1dc97,
+                  #e9a9b3,
+                  #d586e0,
+                  #91a1fa
+                );
+            }
+          }
+
           .number-label {
             width: 86px;
             height: 24px;
@@ -87,6 +135,7 @@
             font: var(--font-paragraph-large);
             color: var(--color-content-secondary);
           }
+
           .number {
             display: flex;
             flex-direction: column;
