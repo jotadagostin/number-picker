@@ -70,45 +70,45 @@
               results on the screen. It's quick and easy!
             </p>
           </div>
-          <form action="">
+          <form id="form-draw" action="javascript:void(0);">
             <div class="container-form-numbers">
               <div id="numbers-wrapper">
                 <div class="number-wrapper">
-                  <label for="numbers-quantity" class="number-label"
+                  <label for="input-quantity" class="number-label"
                     >NUMBERS</label
                   >
                   <div class="input-wrapper">
                     <input
+                      type="number"
                       name="numbers-quantity"
-                      id="numbers-quantity"
+                      id="numbers-quantity-1"
                       class="number"
                       value="2"
+                      min="1"
                     />
                   </div>
                 </div>
                 <div class="number-wrapper">
-                  <label for="numbers-quantity" class="number-label"
-                    >FROM</label
-                  >
+                  <label for="input-from" class="number-label">FROM</label>
                   <div class="input-wrapper">
                     <input
+                      type="number"
                       name="numbers-quantity"
-                      id="numbers-quantity"
+                      id="numbers-quantity-2"
                       class="number"
                       value="1"
                     />
                   </div>
                 </div>
                 <div class="number-wrapper">
-                  <label for="numbers-quantity" class="number-label"
-                    >UNTIL</label
-                  >
+                  <label for="input-to" class="number-label">TO</label>
                   <div class="input-wrapper">
                     <input
+                      type="number"
                       name="numbers-quantity"
-                      id="numbers-quantity"
+                      id="numbers-quantity-3"
                       class="number"
-                      value="100"
+                      value="0"
                     />
                   </div>
                 </div>
@@ -118,7 +118,7 @@
                 <span>Do not repeat number</span>
               </div>
             </div>
-            <button>
+            <button type="submit">
               <span>DRAW</span>
               <img
                 src="./assets/icons/arrow.svg"
@@ -128,7 +128,7 @@
           </form>
         </div>
 
-        <!-- <div class="container-result">
+        <div class="container-result">
           <div class="container-result-titles">
             <h1>Result of the draw</h1>
             <h2>1º result</h2>
@@ -144,8 +144,10 @@
               alt="seta apontando pro lado direito"
             />
           </button>
-        </div> -->
+        </div>
       </div>
     </main>
+
+    <script src="javascript/script.js"></script>
   </body>
 </html>

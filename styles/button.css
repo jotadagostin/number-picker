@@ -7,7 +7,7 @@ button {
   color: var(--color-content-primary);
   border-radius: 8px;
   border: none;
-
+  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
