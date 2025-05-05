@@ -12,7 +12,7 @@
   /* Content: */
   --color-content-primary: #ffffff;
   --color-content-secondary: #c7c9cc;
-  --color-content-tentiary: #d9d9d9;
+  --color-content-tertiary: #d9d9d9;
   --color-content-brand: #c58de7;
   --color-inverse: #030203;
 
@@ -56,6 +56,7 @@
   --font-family-sora: "Sora", system-ui;
   --font-display-large: 800 72px/130% var(--font-family-sora);
   --font-display-medium: 800 40px/130% var(--font-family-sora);
+  --font-display-medium2: 800 24px/130% var(--font-family-sora);
   --font-display-small: 700 32px/130% var(--font-family-sora);
 
   /* Font-family Roboto Mono */
@@ -85,4 +86,13 @@ body {
     ),
     var(--color-background-primary) url(../assets/img/backrgound-img.png) bottom
       left/100% no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main {
+  width: 1098px;
+  height: 512px;
+  display: flex;
 }

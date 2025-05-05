@@ -15,7 +15,7 @@
     />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Number picker</title>
+    <title>Number draw</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -24,5 +24,110 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="styles/index.css" />
   </head>
-  <body></body>
+  <body>
+    <header>
+      <div class="header-logo">
+        <img src="assets/icons/logo.svg" alt="purple lotus logo" />NUMBERS
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+        <div class="container-titles">
+          <div class="container-title">
+            <h2>ONLINE - FREE</h2>
+            <h1>Random Number Generator</h1>
+          </div>
+          <div class="container-paragraphs">
+            <div class="container-paragraph">
+              <h3>
+                <img src="assets/icons/user-purple.svg" alt="" />How does the
+                Random Number Generator work?
+              </h3>
+              <p>
+                The randomizer uses a random generation algorithm to create
+                numbers within the range specified by the user.
+              </p>
+            </div>
+            <div class="container-paragraph">
+              <h3>
+                <img src="assets/icons/user-purple.svg" alt="" />Can I choose
+                the range of numbers?
+              </h3>
+              <p>
+                Yes, you can set the minimum and maximum values ​​for the range
+                of drawn numbers.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="container-form">
+          <div class="container-form-paragraph">
+            <h2>I want to draw</h2>
+            <p>
+              Set the range and number of numbers, click "Draw" and see the
+              results on the screen. It's quick and easy!
+            </p>
+          </div>
+          <form action="">
+            <div class="container-form-numbers">
+              <div id="numbers-wrapper">
+                <div class="number-wrapper">
+                  <label for="numbers-quantity" class="number-label"
+                    >NUMBERS</label
+                  >
+                  <div class="input-wrapper">
+                    <input
+                      name="numbers-quantity"
+                      id="numbers-quantity"
+                      class="number"
+                      value="2"
+                    />
+                  </div>
+                </div>
+                <div class="number-wrapper">
+                  <label for="numbers-quantity" class="number-label"
+                    >FROM</label
+                  >
+                  <div class="input-wrapper">
+                    <input
+                      name="numbers-quantity"
+                      id="numbers-quantity"
+                      class="number"
+                      value="1"
+                    />
+                  </div>
+                </div>
+                <div class="number-wrapper">
+                  <label for="numbers-quantity" class="number-label"
+                    >UNTIL</label
+                  >
+                  <div class="input-wrapper">
+                    <input
+                      name="numbers-quantity"
+                      id="numbers-quantity"
+                      class="number"
+                      value="100"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div id="switch-wrapper">
+                <input type="checkbox" name="switch" id="switch" checked />
+                <span>Do not repeat number</span>
+              </div>
+            </div>
+            <button>
+              <span>DRAW</span>
+              <img
+                src="./assets/icons/arrow.svg"
+                alt="seta apontando pro lado direito"
+              />
+            </button>
+          </form>
+        </div>
+      </div>
+    </main>
+  </body>
 </html>
