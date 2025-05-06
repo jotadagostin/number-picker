@@ -15,11 +15,12 @@ This is one of the challenges of the Full Stack training, one of the contents av
 --Header-logo [x]
 --Main: Container-title [x]
 --Container-form [x]
+--Responsive CSS []
 
 -Javascript:
 
---Get the values ​​correctly from the form. []
+--Get the values ​​correctly from the form. [x]
 
---Generate the numbers with or without repetition, according to the checkbox. []
+--Generate the numbers with or without repetition, according to the checkbox. [x]
 
---Display the result nicely (activate that <div class="container-result"> or generate a similar one). []
+--Display the result nicely (activate that <div class="container-result"> or generate a similar one). [x]

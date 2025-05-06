@@ -1,2 +1,30 @@
 @media screen and (max-width: 390px) {
+  header {
+    .header-logo {
+      max-width: 390px;
+      justify-content: center;
+    }
+  }
+
+  main {
+    width: 100%;
+    max-width: 390px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+
+    .container {
+      flex-direction: column;
+      background-color: pink;
+
+      .container-titles {
+        background-color: green;
+        max-width: 390px;
+
+        .container-title {
+          background-color: gray;
+        }
+      }
+    }
+  }
 }
