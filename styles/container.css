@@ -97,9 +97,16 @@
         }
 
         & .number:focus {
-          background: var(--color-background-tertiary);
+          background-color: var(--linear-gradient-border);
           border: 1px solid var(--color-content-brand);
+          padding: 20px;
           outline: none;
+        }
+
+        & .number:focus::after {
+          /* background: var(--color-background-secondary); */
+          width: 99.34%;
+          height: 52.8px;
         }
 
         .number {
@@ -135,10 +142,10 @@
   }
 }
 .container-result {
-  display: none;
+  display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-around;
   color: white;
   width: 486px;
   /* width: 100%; */
@@ -169,6 +176,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    overflow-wrap: break-word;
     gap: 12px;
     max-width: 100%;
     span {
@@ -182,11 +190,13 @@
   .container-result-numbers span {
     position: relative;
     display: inline-block;
-    padding: 10px 30px;
+    width: 100px;
+    text-align: center;
+    padding: 20px 20px;
     border-radius: 8px;
-    background: var(--color-background-secondary);
+    background: var(--color-content-brand);
     font: var(--font-overline-result);
-    color: var(--color-content-primary);
+    color: var(--color-inverse);
 
     /* Quadrado girante */
     background-color: var(--color-content-brand); /* Cor roxa */
@@ -209,6 +219,27 @@
   .container-result-numbers span.show-number {
     animation: showNumber 0.5s ease-in-out forwards;
   }
+}
+
+.number-spin {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  font-size: 24px;
+  font-weight: bold;
+  color: transparent;
+  background: linear-gradient(
+    91.26deg,
+    #77c0af 0%,
+    #d1dc97 14.84%,
+    #e9a9b3 32.15%,
+    #d586e0 65.79%,
+    #91a1fa 84.58%
+  );
+  border-radius: 8px;
+  animation: spinGradient 1s linear forwards;
 }
 
 @keyframes rotateIn {
