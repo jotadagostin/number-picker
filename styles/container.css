@@ -44,6 +44,7 @@
           font: var(--font-paragraph-small);
           color: var(--color-content-secondary);
           padding-left: 28px;
+          width: 500px;
         }
       }
     }
@@ -139,8 +140,9 @@
   align-items: center;
   justify-content: space-evenly;
   color: white;
-  width: 100%;
-  max-width: 482px;
+  width: 486px;
+  /* width: 100%; */
+  /* max-width: 482px; */
   padding: 24px;
   gap: 24px;
   height: 494px;
@@ -175,5 +177,62 @@
       font: var(--font-overline-result);
       color: var(--color-content-brand);
     }
+  }
+
+  .container-result-numbers span {
+    position: relative;
+    display: inline-block;
+    padding: 10px 30px;
+    border-radius: 8px;
+    background: var(--color-background-secondary);
+    font: var(--font-overline-result);
+    color: var(--color-content-primary);
+
+    /* Quadrado girante */
+    background-color: var(--color-content-brand); /* Cor roxa */
+    animation: rotateIn 1s ease-out forwards;
+  }
+
+  .container-result-numbers span::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-content-brand); /* Cor roxa */
+    border-radius: 8px;
+    animation: rotateIn 1s ease-out forwards;
+    z-index: -1; /* Faz o quadrado ficar atrás do número */
+  }
+
+  .container-result-numbers span.show-number {
+    animation: showNumber 0.5s ease-in-out forwards;
+  }
+}
+
+@keyframes rotateIn {
+  0% {
+    transform: rotate(0deg);
+    opacity: 1;
+  }
+  50% {
+    transform: rotate(180deg);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes showNumber {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
   }
 }
