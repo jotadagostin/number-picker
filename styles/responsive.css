@@ -90,6 +90,10 @@
         }
       }
 
+      .container-result {
+        width: 390px;
+      }
+
       .container-result-numbers {
         width: 339px;
       }
