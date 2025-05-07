@@ -89,6 +89,14 @@
         .container-form-paragraph {
         }
       }
+
+      .container-result-numbers {
+        width: 339px;
+      }
     }
+  }
+
+  button#draw-again {
+    width: 319px;
   }
 }
