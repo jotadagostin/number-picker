@@ -21,8 +21,8 @@ drawAgainButton.addEventListener("click", resetPage);
 
 // Quando o formulário for enviado, executa o sorteio
 form.addEventListener("submit", function (event) {
-  event.preventDefault(); // Impede o comportamento padrão (recarregar a página)
-  drawNumbers(); // Chama a função para sortear os números
+  event.preventDefault(); // //block the standart behavio(reload the page)
+  drawNumbers(); //call the function draw number
 });
 
 // Função principal: sorteia os números
