@@ -12,6 +12,8 @@ button {
   align-items: center;
   justify-content: center;
   gap: 8px;
+  position: relative;
+  z-index: 10;
 
   font: var(--font-label-medium);
   line-height: 0;
@@ -29,10 +31,10 @@ button {
     width: inherit;
     height: inherit;
     border-radius: 8px;
+    z-index: -1;
   }
   &:hover {
     background: var(--linear-gradient-border);
-
     animation: changeGradient 500ms 0ms infinite linear;
 
     /* & img {
@@ -58,6 +60,8 @@ button#draw-again {
   background: transparent;
   border: none;
   cursor: pointer;
+  position: relative;
+  z-index: 10;
 }
 
 button#draw-again img {
