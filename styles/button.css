@@ -1,19 +1,16 @@
 button {
   width: 100%;
   /* width: 30.125rem; */
-  margin-top: 40px;
-  height: 56px;
+  height: 3.5rem;
   background: transparent;
   color: var(--color-content-primary);
-  border-radius: 8px;
+  border-radius: 0.5rem;
   border: none;
-  cursor: pointer;
+
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
-  position: relative;
-  z-index: 10;
+  gap: 0.5rem;
 
   font: var(--font-label-medium);
   line-height: 0;
@@ -30,46 +27,22 @@ button {
     background: var(--color-background-tertiary);
     width: inherit;
     height: inherit;
-    border-radius: 8px;
-    z-index: -1;
+    border-radius: 0.5em;
   }
   &:hover {
     background: var(--linear-gradient-border);
+
     animation: changeGradient 500ms 0ms infinite linear;
 
     /* & img {
-        animation: changeIconPlace 2s 0ms infinite ease-in-out;
-      } */
+      animation: changeIconPlace 2s 0ms infinite ease-in-out;
+    } */
     &::after {
       background: var(--color-background-secondary);
       width: 99.34%;
-      height: 52.8px;
-    }
-
-    img {
-      animation: arrowMove 1s infinite ease-in-out;
+      height: 3.3rem;
     }
   }
-}
-
-button#draw-again {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  position: relative;
-  z-index: 10;
-}
-
-button#draw-again img {
-  transition: transform 0.3s ease;
-}
-
-button#draw-again:hover img {
-  animation: rotateIcon 1.2s linear infinite;
 }
 
 @keyframes changeGradient {
@@ -132,26 +105,5 @@ button#draw-again:hover img {
       #d586e0 66.31%,
       #91a1fa 85.11%
     );
-  }
-}
-
-@keyframes arrowMove {
-  0% {
-    transform: translateX(0);
-  }
-  50% {
-    transform: translateX(6px);
-  }
-  100% {
-    transform: translateX(0);
-  }
-}
-
-@keyframes rotateIcon {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
   }
 }

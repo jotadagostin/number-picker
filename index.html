@@ -1,59 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Sora:wght@100..800&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Sora:wght@100..800&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Sora:wght@100..800&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Number draw</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <title>Numbers</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="styles/index.css" />
   </head>
-  <body>
-    <header>
-      <div class="header-logo">
-        <img src="assets/icons/logo.svg" alt="purple lotus logo" />NUMBERS
-      </div>
-    </header>
 
-    <main>
-      <div class="container">
-        <div class="container-titles">
-          <div class="container-title">
-            <h2>ONLINE - FREE</h2>
-            <h1>Random Number Generator</h1>
+  <body>
+    <div id="container">
+      <div id="logo">
+        <img src="./assets/logo.svg" alt="logotipo" />
+        <span>NUMBERS</span>
+      </div>
+      <main>
+        <div>
+          <div class="overline">ONLINE - FREE</div>
+          <h1>DRAW <br />OF NUMBER</h1>
+          <div id="info-container" class="only-desktop">
+            <div class="info">
+              <img src="./assets/info.svg" alt="ícone de informação" />
+              <div>
+                <h2>How does the number picker work?</h2>
+                <p>
+                  The draw uses a random generation algorithm to create numbers
+                  within the range specified by the user.
+                </p>
+              </div>
+            </div>
+            <div class="info">
+              <img src="./assets/info.svg" alt="ícone de informação" />
+              <div>
+                <h2>Can I choose the range of numbers?</h2>
+                <p>
+                  Yes, you can set the minimum and maximum values ​​for the
+                  range of drawn numbers.
+                </p>
+              </div>
+            </div>
           </div>
-          <div class="container-paragraphs">
-            <div class="container-paragraph">
-              <h3>
-                <img src="assets/icons/user-purple.svg" alt="" />How does the
-                Random Number Generator work?
-              </h3>
+        </div>
+        <div id="number-draw" class="draw-container">
+          <div class="title-container">
+            <div class="label-large">I WANT TO DRAW:</div>
+            <p>
+              Set the range and number of numbers, click "Draw" and see the
+              results on the screen. It's quick and easy!
+            </p>
+          </div>
+          <form>
+            <div id="numbers-container">
+              <div id="numbers-wrapper">
+                <div class="number-wrapper">
+                  <label for="numbers-quantity" class="number-label"
+                    >NUMBER</label
+                  >
+                  <div class="input-wrapper">
+                    <input
+                      name="numbers-quantity"
+                      id="numbers-quantity"
+                      class="number"
+                      value="2"
+                    />
+                  </div>
+                </div>
+                <div class="number-wrapper">
+                  <label for="min-number" class="number-label">FROM</label>
+                  <div class="input-wrapper">
+                    <input
+                      name="min-number"
+                      id="min-number"
+                      class="number"
+                      value="1"
+                    />
+                  </div>
+                </div>
+                <div class="number-wrapper">
+                  <label for="max-number" class="number-label">TO</label>
+                  <div class="input-wrapper">
+                    <input
+                      name="max-number"
+                      id="max-number"
+                      class="number"
+                      value="100"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div id="switch-wrapper">
+                <input type="checkbox" name="switch" id="switch" checked />
+                <span>do not repeat number</span>
+              </div>
+            </div>
+            <button>
+              <span>DRAW</span>
+              <img
+                src="./assets/arrow.svg"
+                alt="seta apontando pro lado direito"
+              />
+            </button>
+          </form>
+        </div>
+        <div id="number-draw-results" class="draw-container">
+          <div class="title-container">
+            <div class="label-large">RESULT OF THE DRAW</div>
+            <p><span id="result-number">0</span>º RESULT</p>
+          </div>
+          <div id="draw-numbers-container">
+            <!-- <div class="number-container">
+            <span>23</span>
+          </div> -->
+          </div>
+          <button>
+            <span>DRAW AGAIN</span>
+            <img src="./assets/play-again.svg" alt="ícone de play girando" />
+          </button>
+        </div>
+        <div id="info-container" class="only-mobile">
+          <div class="info">
+            <img src="./assets/info.svg" alt="ícone de informação" />
+            <div>
+              <h2>How does the number picker work?</h2>
               <p>
-                The randomizer uses a random generation algorithm to create
-                numbers within the range specified by the user.
+                The draw uses a random generation algorithm to create numbers
+                within the range specified by the user.
               </p>
             </div>
-            <div class="container-paragraph">
-              <h3>
-                <img src="assets/icons/user-purple.svg" alt="" />Can I choose
-                the range of numbers?
-              </h3>
+          </div>
+          <div class="info">
+            <img src="./assets/info.svg" alt="ícone de informação" />
+            <div>
+              <h2>Can I choose the range of numbers?</h2>
               <p>
                 Yes, you can set the minimum and maximum values ​​for the range
                 of drawn numbers.
@@ -61,92 +156,8 @@
             </div>
           </div>
         </div>
-
-        <div class="container-form">
-          <div class="container-form-paragraph">
-            <h2>I want to draw</h2>
-            <p>
-              Set the range and number of numbers, click "Draw" and see the
-              results on the screen. It's quick and easy!
-            </p>
-          </div>
-          <form id="form-draw" action="javascript:void(0);">
-            <div class="container-form-numbers">
-              <div id="numbers-wrapper">
-                <div class="number-wrapper">
-                  <label for="input-quantity" class="number-label"
-                    >NUMBERS</label
-                  >
-                  <div class="input-wrapper">
-                    <input
-                      type="number"
-                      name="numbers-quantity"
-                      id="numbers-quantity-1"
-                      class="number"
-                      value="2"
-                      min="1"
-                    />
-                  </div>
-                </div>
-                <div class="number-wrapper">
-                  <label for="input-from" class="number-label">FROM</label>
-                  <div class="input-wrapper">
-                    <input
-                      type="number"
-                      name="numbers-quantity"
-                      id="numbers-quantity-2"
-                      class="number"
-                      value="1"
-                    />
-                  </div>
-                </div>
-                <div class="number-wrapper">
-                  <label for="input-to" class="number-label">TO</label>
-                  <div class="input-wrapper">
-                    <input
-                      type="number"
-                      name="numbers-quantity"
-                      id="numbers-quantity-3"
-                      class="number"
-                      value="0"
-                    />
-                  </div>
-                </div>
-              </div>
-              <div id="switch-wrapper">
-                <input type="checkbox" name="switch" id="switch" checked />
-                <span>Do not repeat number</span>
-              </div>
-            </div>
-            <button type="submit">
-              <span>DRAW</span>
-              <img
-                src="./assets/icons/arrow.svg"
-                alt="seta apontando pro lado direito"
-              />
-            </button>
-          </form>
-        </div>
-
-        <div class="container-result">
-          <div class="container-result-titles">
-            <h1>Result of the draw</h1>
-            <h2 id="result-subtitle"></h2>
-          </div>
-          <div class="container-result-numbers">
-            <!-- <span >23</span> -->
-            <!-- <span>12</span> -->
-          </div>
-          <button id="draw-again">
-            <span>DRAW AGAIN</span>
-            <img
-              src="./assets/icons/play.svg"
-              alt="seta apontando pro lado direito"
-            />
-          </button>
-        </div>
-      </div>
-    </main>
+      </main>
+    </div>
 
     <script src="javascript/script.js"></script>
   </body>
